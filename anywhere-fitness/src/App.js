@@ -16,9 +16,7 @@ function App() {
         
       </header>
 
-      <Route>
-        <Home />
-      </Route>
+    
 
     </div>
   );
