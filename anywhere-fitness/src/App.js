@@ -79,7 +79,6 @@ function App() {
          <SignUp />
          </Route>
 
-
       </div>
     </div>
   );
