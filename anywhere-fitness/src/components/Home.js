@@ -31,7 +31,11 @@ const Home = () => {
                         <Image src='./images/fitness3.jpg' alt='' />   
                     </Flex>
 
-                    <Button bg='coral'>Sign Up Today!</Button> 
+
+                    <Link to='/class/add'>
+                    <Button bg='coral'>Sign Up for Classes!</Button> 
+                    </Link>
+                    
                     <Flex>
                       <div>
                           <h4>Address</h4>
