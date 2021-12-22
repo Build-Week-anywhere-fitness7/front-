@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./App.css";
 import { Link, Route } from "react-router-dom";
 import Home from "./components/Home";
@@ -21,7 +22,10 @@ const StyledLinks = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   width: 85%;
+
+
   font-size: 1.5rem;
+
 `;
 
 const StyledLogin = styled.div`
@@ -62,6 +66,7 @@ function App() {
         </header>
       </StyledHeader>
       <div>
+
         <Route exact path="/">
           <Home />\
           
@@ -72,7 +77,6 @@ function App() {
          <PrivateRoute path="/class/add" component={AddClass}/>
          <PrivateRoute path="/class" component={Class}/>
          <PrivateRoute  path="/signup" component={SignUp}/>
-       
       </div>
     </div>
   );
