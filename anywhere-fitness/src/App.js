@@ -7,9 +7,9 @@ import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import styled from "styled-components";
 import Logout from "./components/Logout";
-import PrivateRoute from "./components/PrivateRoute"
-import Class from "./components/Class"
-import AddClass from "./components/AddClass"
+import PrivateRoute from "./components/PrivateRoute";
+import Class from "./components/Class";
+import AddClass from "./components/AddClass";
 
 const StyledHeader = styled.div`
   display: inline-block;
@@ -23,9 +23,7 @@ const StyledLinks = styled.div`
   justify-content: flex-end;
   width: 85%;
 
-
   font-size: 1.5rem;
-
 `;
 
 const StyledLogin = styled.div`
@@ -66,23 +64,20 @@ function App() {
         </header>
       </StyledHeader>
       <div>
-
         <Route exact path="/">
           <Home />
         </Route>
-        <PrivateRoute path="/login" component={Login}/>
-  
-        <PrivateRoute path="/logout" component={Logout}/>
-         <PrivateRoute path="/class/add" component={AddClass}/>
-         <PrivateRoute path="/class" component={Class}/>
-         <Route  path="/signup" component={SignUp}>
-         <SignUp />
-         </Route>
+        <PrivateRoute path="/login" component={Login} />
 
-
+        <PrivateRoute path="/logout" component={Logout} />
+        <PrivateRoute path="/class/add" component={AddClass} />
+        <PrivateRoute path="/class" component={Class} />
+        <Route path="/signup" component={SignUp}>
+          <SignUp />
+        </Route>
       </div>
     </div>
   );
 }
 
-export default App;;
+export default App;
