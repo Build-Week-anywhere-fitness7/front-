@@ -1,45 +1,81 @@
-import React from 'react';
-import './App.css';
-import { BrowserRouter as Router, Route, Redirect, Link, Switch } from 'react-router-dom';
+import React from "react";
+import "./App.css";
+import { Link, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
+import styled from "styled-components";
+import Logout from "./components/Logout";
+import PrivateRoute from "./components/PrivateRoute"
+import Class from "./components/Class"
+import AddClass from "./components/AddClass"
 
-import Login from './components/Login';
-import FriendsList from './components/FriendsList';
-import AddFriend from './components/AddFriend';
-import Logout from './components/Logout';
-import PrivateRoute from './components/PrivateRoute';
+const StyledHeader = styled.div`
+  display: inline-block;
+  background-color: #deb887;
+  width: 100%;
+`;
+
+const StyledLinks = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 85%;
+  font-size: 1.5rem;
+`;
+
+const StyledLogin = styled.div`
+  margin: 0 4rem;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background-color: #d3d3d3;
+  }
+`;
+
+const StyledRegister = styled.div`
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background-color: #d3d3d3;
+  }
+`;
 
 function App() {
   return (
-
-    <Router>
-      <div className="App">
-        <header>
-          <h2>Friends</h2>
-
-          <Link className='link' to='/'>Login</Link>
-          <Link className='link' to='/friends'> Friends List</Link> 
-          <Link className='link' to='/friends/add'>Add a friend</Link>
-          <Link className='link' to='/logout'>Logout</Link>
-          
+    <div className="App">
+      <StyledHeader>
+        <header className="App-header">
+          <Link to="/">
+            <h1>Anywhere Fitness</h1>
+          </Link>
+          <div className="nav-links">
+            <StyledLinks>
+              <StyledLogin>
+                <Link to="/login">Sign In</Link>
+              </StyledLogin>
+              <StyledRegister>
+                <Link to="/signup">Register</Link>
+              </StyledRegister>
+            </StyledLinks>
+          </div>
         </header>
-        <Switch>
-  
-          <Route exact path="/login">
-          <Login/>
-            <Redirect to="/" />
-          </Route>
-
-          <PrivateRoute path="/friends" component={FriendsList} />
-          <PrivateRoute path="/friends/add" component={AddFriend}/>
-          <PrivateRoute path="/logout" component={Logout} />
-        </Switch>
+      </StyledHeader>
+      <div>
+        <Route exact path="/">
+          <Home />\
+          
+        </Route>
+        
+        <PrivateRoute path="/login" component={Login}/>
+        <PrivateRoute path="/logout" component={Logout}/>
+         <PrivateRoute path="/class/add" component={AddClass}/>
+         <PrivateRoute path="/class" component={Class}/>
+         <PrivateRoute  path="/signup" component={SignUp}/>
+       
       </div>
-    </Router>
+    </div>
   );
 }
 
-export default App;
-
-
-
-
+export default App;;
