@@ -1,6 +1,5 @@
-import React,{ useState } from "react";
-
-
+import React, { useState } from "react";
+import { Button, Form, Input, Label } from "reactstrap";
 
 const Login = () => {
   const [login, setLogin] = useState({
@@ -32,29 +31,29 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <h1>Login</h1>
-      <label>Username:</label>
-      <input
+      <Label>Username:</Label>
+      <Input
         name="username"
         type="text"
         placeholder="Username"
         onChange={handleChange}
         value={login.username}
       />
-      <label>
+      <Label>
         Password:
-        <input
+        <Input
           name="password"
           type="password"
           placeholder="Password"
           onChange={handleChange}
           value={login.password}
         />
-      </label>
+      </Label>
       <p id="error"></p>
-      <button>Log In</button>
-    </form>
+      <Button>Log In</Button>
+    </Form>
   );
 };
 
