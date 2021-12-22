@@ -6,7 +6,6 @@ import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import styled from "styled-components";
 import Logout from "./components/Logout";
-import PrivateRoute from "./components/PrivateRoute"
 import Class from "./components/Class"
 import AddClass from "./components/AddClass"
 
@@ -63,15 +62,26 @@ function App() {
       </StyledHeader>
       <div>
         <Route exact path="/">
-          <Home />\
+          <Home/>
           
         </Route>
         
-        <PrivateRoute path="/login" component={Login}/>
-        <PrivateRoute path="/logout" component={Logout}/>
-         <PrivateRoute path="/class/add" component={AddClass}/>
-         <PrivateRoute path="/class" component={Class}/>
-         <PrivateRoute  path="/signup" component={SignUp}/>
+        <Route path="/login">
+          <Login/>
+          </Route>
+
+        <Route path="/logout">
+          <Logout/>
+        </Route>
+         <Route path="/class/add">
+         <AddClass/>
+          </Route>
+         <Route path="/class" >
+           <Class/>
+           </Route>
+         <Route  path="/signup">
+           <SignUp/>
+           </Route>
        
       </div>
     </div>
