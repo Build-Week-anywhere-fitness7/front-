@@ -1,3 +1,4 @@
+
 # Anywhere Fitness Front-End 
 ## vercel link 
 https://front-end-psi-topaz.vercel.app/
@@ -68,3 +69,4 @@ Instructors can take attendance, request and process payments, create virtual �
 ## 🏃‍♀️**Stretch**
 
 1. Implement payments using PayPal, Stripe or another 3rd party API.
+
