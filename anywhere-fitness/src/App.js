@@ -68,17 +68,15 @@ function App() {
       <div>
 
         <Route exact path="/">
-          <Home />
+          <Home />\
+          
         </Route>
+        
         <PrivateRoute path="/login" component={Login}/>
-  
         <PrivateRoute path="/logout" component={Logout}/>
          <PrivateRoute path="/class/add" component={AddClass}/>
          <PrivateRoute path="/class" component={Class}/>
-         <Route  path="/signup" component={SignUp}>
-         <SignUp />
-         </Route>
-
+         <PrivateRoute  path="/signup" component={SignUp}/>
       </div>
     </div>
   );
