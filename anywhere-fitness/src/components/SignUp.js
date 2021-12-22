@@ -35,6 +35,26 @@ const SignUp = () => {
       </label>
 
       <label>
+        Email
+        <input
+          name="email"
+          type="email"
+          //onChange={handleChange}
+          //value=
+        />
+      </label>
+
+      <label>
+        Password
+        <input
+          name="password"
+          type="password"
+          //onChange={handleChange}
+          // value=
+        />
+      </label>
+
+      <label>
         Client
         <input
           name="client"
