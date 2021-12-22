@@ -16,7 +16,7 @@ const StyledLinks = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   width: 85%;
-  font-size: 7rem;
+  font-size: 1.5rem;
 `;
 
 const StyledLogin = styled.div`
