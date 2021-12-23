@@ -11,7 +11,7 @@ import AddClass from "./components/AddClass";
 
 const StyledHeader = styled.div`
   display: inline-block;
-  background-color: #deb887;
+  background-color: #ffffff;
   width: 100%;
 `;
 
