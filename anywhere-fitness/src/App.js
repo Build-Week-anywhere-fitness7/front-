@@ -6,8 +6,8 @@ import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import styled from "styled-components";
 import Logout from "./components/Logout";
-import Class from "./components/Class"
-import AddClass from "./components/AddClass"
+import Class from "./components/Class";
+import AddClass from "./components/AddClass";
 
 const StyledHeader = styled.div`
   display: inline-block;
@@ -62,30 +62,28 @@ function App() {
       </StyledHeader>
       <div>
         <Route exact path="/">
-          <Home/>
-          
+          <Home />
         </Route>
-        
+
         <Route path="/login">
-          <Login/>
-          </Route>
+          <Login />
+        </Route>
 
         <Route path="/logout">
-          <Logout/>
+          <Logout />
         </Route>
-         <Route path="/class/add">
-         <AddClass/>
-          </Route>
-         <Route path="/class" >
-           <Class/>
-           </Route>
-         <Route  path="/signup">
-           <SignUp/>
-           </Route>
-       
+        <Route path="/class/add">
+          <AddClass />
+        </Route>
+        <Route path="/class">
+          <Class />
+        </Route>
+        <Route path="/signup">
+          <SignUp />
+        </Route>
       </div>
     </div>
   );
 }
 
-export default App;;
+export default App;
