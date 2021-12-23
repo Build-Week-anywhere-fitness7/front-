@@ -1,100 +1,71 @@
 import React from "react";
+import { Button, Form, Input, Label } from "reactstrap";
 
 const SignUp = () => {
   return (
-    <form>
+    <Form className="form-styling">
       <h3>Sign Up</h3>
-      <label>
-        Username
-        <input
+      <Label>
+        Username:
+        <Input
           name="username"
           type="text"
           //onChange={handleChange}
           //value=
         />
-      </label>
+      </Label>
 
-      <label>
-        Email
-        <input
+      <Label>
+        Email:
+        <Input
           name="email"
           type="email"
           //onChange={handleChange}
           //value=
         />
-      </label>
+      </Label>
 
-      <label>
-        Password
-        <input
+      <Label>
+        Password:
+        <Input
           name="password"
           type="password"
           //onChange={handleChange}
           // value=
         />
-      </label>
+      </Label>
 
-      <label>
-        Password
-        <input
-          name="password"
-          type="password"
-          //onChange={handleChange}
-          // value=
-        />
-      </label>
-
-      <label>
-        Email
-        <input
-          name="email"
-          type="email"
-          //onChange={handleChange}
-          //value=
-        />
-      </label>
-
-      <label>
-        Password
-        <input
-          name="password"
-          type="password"
-          //onChange={handleChange}
-          // value=
-        />
-      </label>
-
-      <label>
+      <Label>
         Client
-        <input
+        <Input
           name="client"
           type="radio"
           // onChange={handleChange}
           //value=
         />
-      </label>
+      </Label>
       <br />
-      <label>
+      <Label>
         Instructor
-        <input
+        <Input
           name="Instructor"
           type="radio"
           //onChange={handleChange}
           //value=
         />
-      </label>
+      </Label>
 
-      <label>
-        Authantic Code
-        <input
+      <Label>
+        Authenticate Code
+        <Input
           name="auth"
           type="text"
           //onChange={handleChange}
           //value=
         />
-      </label>
-      <button>Sign Up</button>
-    </form>
+      </Label>
+      <Button>Sign Up</Button>
+    </Form>
   );
 };
 
