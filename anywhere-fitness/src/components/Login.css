@@ -1,4 +1,4 @@
-.Login {
+.form-styling {
   border: 2px solid #d3d3d3;
   border-radius: 0.5em;
   margin-bottom: 1em;
@@ -16,4 +16,8 @@
 
 label {
   font-weight: 600;
+}
+.radio-button {
+  margin-bottom: 1em;
+  margin-right: 5em;
 }
