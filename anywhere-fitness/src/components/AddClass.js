@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import axios from 'axios'
+import axios from 'axios';
+axios.get('/api/classes');
 
 const AddClass=() => {
     const [workout, setWorkout] = useState({
@@ -12,7 +13,10 @@ const AddClass=() => {
     }
     const onSubmit = (e) => {
         e.preventDefault();
-        
+        axios.post('')
+            .then(res => {
+                console.log(res)
+            })
     }
     return(
         <form >
