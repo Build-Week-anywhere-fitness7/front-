@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button, Form, Input, Label } from "reactstrap";
 
 const AddClass = (props) => {
   const [item, setItem] = useState({
@@ -13,76 +14,89 @@ const AddClass = (props) => {
   });
 
   return (
-    <form>
-      <label>
+    <Form className="form-styling">
+      <Label>
         Class Name
+        <br />
         <input
           name="class_name"
           //value=
           //onChange={handleChange}
         />
-      </label>
-      <label>
+      </Label>
+      <br />
+      <Label>
         Class Type
-        <input
+        <Input
           name="class_type_name"
           //value=
           //onChange={handleChange}
         />
-      </label>
-
-      <label>
+      </Label>
+      <br />
+      <Label>
         Class Time
+        <br />
         <input
           name="class_time"
           // value=
           //onChange={handleChange}
         />
-      </label>
-      <label>
+      </Label>
+      <br />
+      <Label>
         Class Duration
+        <br />
         <input
           name="duration"
           //value=
           //onChange={handleChange}
         />
-      </label>
-      <label>
+      </Label>
+      <br />
+      <Label>
         Intensity Level
-        <input
+        <br />
+        <Input
           name="intensity"
           //value=
           // onChange={handleChange}
         />
-      </label>
-      <label>
+      </Label>
+      <br />
+      <Label>
         Class Location
+        <br />
         <input
           name="location"
           //value=
           // onChange={handleChange}
         />
-      </label>
+      </Label>
+      <br />
 
-      <label>
+      <Label>
         Current Number Registrants
+        <br />
         <input
           name="current_number_registrants"
           //value=
           //onChange={handleChange}
         />
-      </label>
-
-      <label>
+      </Label>
+      <br />
+      <Label>
+        <br />
         Max Class Size
-        <input
+        <Input
           name="max_class_size"
           //value=
           //onChange={handleChange}
         />
-      </label>
-      <button>Add Class</button>
-    </form>
+      </Label>
+      <br />
+      <Button>Add Class</Button>
+    </Form>
   );
 };
 
