@@ -35,26 +35,12 @@ const SignUp = () => {
         />
       </Label>
 
-      <Label>
-        Client
-        <Input
-          name="client"
-          type="radio"
-          // onChange={handleChange}
-          //value=
-        />
-      </Label>
+      <Label> Are you a client or Instructor?</Label>
+      <select name="client">
+        <option value="a">Client</option>
+        <option value="b">Instructor</option>
+      </select>
       <br />
-      <Label>
-        Instructor
-        <Input
-          name="Instructor"
-          type="radio"
-          //onChange={handleChange}
-          //value=
-        />
-      </Label>
-
       <Label>
         Authenticate Code
         <Input
